@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "modules.html",
+    "href": "modules.html",
+    "title": "Modules",
+    "section": "",
+    "text": "Since we don’t have access to our Drive yet, be sure to hit the Mount Drive to mount it\n\n#colab\nfrom google.colab import drive\ndrive.mount('/content/drive')\n\nGo to this URL in a browser: https://accounts.google.com/o/oauth2/auth?client_id=947318989803-6bn6qk8qdgf4n4g3pfee6491hc0brc4i.apps.googleusercontent.com&redirect_uri=urn%3aietf%3awg%3aoauth%3a2.0%3aoob&response_type=code&scope=email%20https%3a%2f%2fwww.googleapis.com%2fauth%2fdocs.test%20https%3a%2f%2fwww.googleapis.com%2fauth%2fdrive%20https%3a%2f%2fwww.googleapis.com%2fauth%2fdrive.photos.readonly%20https%3a%2f%2fwww.googleapis.com%2fauth%2fpeopleapi.readonly\n\nEnter your authorization code:\n··········\nMounted at /content/drive\n\n\nNow let’s work out of our new library\n\nfrom pathlib import Path\nimport os\n\n\ngit_path = Path('drive/My Drive/nbdev_colab')\nos.chdir(git_path)\n\nWe’ll make a quick addition function\nNow let’s put in our hooks and update our library. We can just work out of our local directory now as we changed our working directory\n\n#colab\nsetup_git('.', 'nbdev_colab', 'muellerzr', 'myPass', 'myEmail@gmail.com')\n\n\n#colab\ngit_push('.', 'update ReadMe')"
+  },
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "Core",
+    "section": "",
+    "text": "setup_drive()\n\nGo to this URL in a browser: https://accounts.google.com/o/oauth2/auth?client_id=947318989803-6bn6qk8qdgf4n4g3pfee6491hc0brc4i.apps.googleusercontent.com&redirect_uri=urn%3aietf%3awg%3aoauth%3a2.0%3aoob&response_type=code&scope=email%20https%3a%2f%2fwww.googleapis.com%2fauth%2fdocs.test%20https%3a%2f%2fwww.googleapis.com%2fauth%2fdrive%20https%3a%2f%2fwww.googleapis.com%2fauth%2fdrive.photos.readonly%20https%3a%2f%2fwww.googleapis.com%2fauth%2fpeopleapi.readonly\n\nEnter your authorization code:\n··········\n\n\nClone your repo into your Google Drive then re-open it (this only needs to be done once) so we are working in it’s codebase\nNow let’s setup our instance to be utilized by Git and accepted\nWe need to pass in the Path to point to our cloned repository along with the needed information. REMEMBER to delete or replace the sensitive information BEFORE uploading to your library\n\ngit_path = Path('drive/My Drive/nbdev_colab')\n\n\nsetup_git(git_path, 'nbdev_colab', 'muellerzr', 'myPass', 'myEmail@gmail.com')\n\nNow let’s make a command to push to our repository, similar to setup_git. This will also make our library for us\nSave your notebook, and now we can push to GitHub. When pushing, make sure not to include spaces, as this will post an error.\n\ngit_push(git_path, 'Final')"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "nbdev_colab",
+    "section": "",
+    "text": "NOTE: I cannot get past the tests with the notebooks. If someone knows what I may be doing wrong please put in a PR :)"
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "nbdev_colab",
+    "section": "Install",
+    "text": "Install\npip install your_project_name"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "nbdev_colab",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2"
+  }
+]
