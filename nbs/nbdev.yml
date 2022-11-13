@@ -1,0 +1,9 @@
+project:
+  output-dir: docs
+
+website:
+  title: "nbdev_colab"
+  site-url: "https://muellerzr.github.io/nbdev_colab/"
+  description: "A template for using `nbdev` in Google Colaboratory fully"
+  repo-branch: master
+  repo-url: "https://github.com/muellerzr/nbdev_colab/tree/master/"
